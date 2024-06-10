@@ -1,5 +1,4 @@
-import playerstat as ps
-import playerattr as pa
+from marloth import playerattr as pa, playerstat as ps
 
 
 def provoke(base=30) -> int:

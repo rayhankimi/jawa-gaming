@@ -1,5 +1,5 @@
 import warriorskill
-import enemyattr as en
+from marloth import enemyattr as en
 
 
 def mechanics(enemyhp, damage=0):

@@ -1,4 +1,4 @@
-from marloth import playerattr as pa, playerstat as ps
+from marloth.player import playerattr as pa, playerstat as ps
 
 
 def provoke(base=30) -> int:
@@ -21,5 +21,13 @@ def combosword(base=100) -> int:
 
 
 def cutthrough(base=100) -> int:
-    damage = base
+    strnMul = ps.strength() * 0.15
+    damage = base + (base * strnMul) + (pa.patk() * 0.3)
+    return damage
+
+
+def burningoath(base=100) -> int:
+    vitMul = ps.vitality() * 0.1
+    strnMul = ps.strength() * 0.05
+    damage = base + (base * vitMul) + (base * strnMul) + (pa.hp() * 0.01)
     return damage

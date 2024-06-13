@@ -1,4 +1,5 @@
-from marloth.player import playerattr as pa, playerstat as ps
+from marloth import playerattr as pa, playerstat as ps
+
 
 def provoke(base=30) -> int:
     vitMul = ps.vitality() * 0.1

@@ -2,10 +2,14 @@ import random as rd
 
 from marloth import enemyattr as en, enemyskill as es, playerattr as pa, warriorskill
 
+from marloth import status
+
 
 def mechanics(hp, damage=0) -> int:
-    finalhp = hp - damage
-    return finalhp
+    reduction = en.enemyreductions()
+    finaldamage = damage * ((100 - reduction) / 100)
+    finalhp = hp - finaldamage
+    return round(finalhp)
 
 
 def skillSelect(enemyhp, skill=None) -> int:
@@ -81,7 +85,7 @@ def enemySkill(playerHp) -> int:
     elif enemyDo == 6:
         damageTaken = es.chomp()
         playerHp = mechanics(playerHp, damageTaken)
-        print(f"Cut Through Damage : {damageTaken} | Enemy Hp {playerHp}")
+        print(f"Enemy use chomp and dealt : {damageTaken} | Your Hp {playerHp}")
 
     else:
         print("You evaded !")

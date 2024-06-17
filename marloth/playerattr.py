@@ -2,13 +2,13 @@ from marloth import playerstat as ps
 
 
 def patk() -> int:
-    pattack = round(1300 + (ps.strength() * 2) + (ps.dexterity() * 1) + (ps.agility() * 0.5))
+    pattack = round(10 + (ps.strength() * 2) + (ps.dexterity() * 1) + (ps.agility() * 0.5))
     return pattack
 
 
 def hp() -> int:
-    hp = 500 + ps.vitality() * 40
-    return hp
+    health = 500 + ps.vitality() * 40
+    return health
 
 
 def pdef() -> int:

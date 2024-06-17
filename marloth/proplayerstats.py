@@ -1,20 +1,20 @@
-def strength(_=5) -> int:
+def strength(_=750) -> int:
     return _
 
 
-def vitality(_=5) -> int:
+def vitality(_=200) -> int:
     return _
 
 
-def intelligence(_=5) -> int:
+def intelligence(_=50) -> int:
     return _
 
 
-def dexterity(_=5) -> int:
+def dexterity(_=340) -> int:
     return _
 
 
-def agility(_=5) -> int:
+def agility(_=180) -> int:
     return _
 
 
